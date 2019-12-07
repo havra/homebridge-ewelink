@@ -1790,6 +1790,10 @@ eWeLink.prototype.removeAccessory = function (accessory) {
 };
 
 eWeLink.prototype.login = function (callback) {
+    this.log('phoneNumber:' + this.config.phoneNumber);
+    this.log('email:' + this.config.email);
+    this.log('password:' + this.config.password);
+    this.log('imei:' + this.config.imei);
     if (!this.config.phoneNumber && !this.config.email || !this.config.password || !this.config.imei) {
         this.log('phoneNumber / email / password / imei not found in config, skipping login');
         callback();
